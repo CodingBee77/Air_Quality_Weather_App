@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if coordinates %}
+    {{ coordinates }}
+{% endif %}
+
+{% if api %}
+    {% if api == "Error..." %}
+        There was an error, please try again...
+    {% else %}
+
+<div class="jumbotron {{ category_color }}">
+    <h1 class="display-4"> {{ api.current.indexes.0.level }} </h1>
+    <p class="lead">Current Air Pollution in {{ city }} </p>
+    <hr class="my-4">
+
+    <p>{{ category_description }}</p>
+
+
+</div>
+
+
+Airly CAQI: {{ api.current.indexes.0.value  }} <br/>
+PM1 [µg/m³]: {{ api.current.values.0.value  }}<br/>
+PM25 [µg/m³]: {{ api.current.values.1.value  }}<br/>
+PM10 [µg/m³]: {{ api.current.values.2.value  }}<br/>
+Pressure [hPa]: {{ api.current.values.3.value  }}<br/>
+Humidity [%]: {{ api.current.values.4.value  }}<br/>
+Temperature [°C]: {{ api.current.values.5.value  }}<br/><br/>
+{% endif %}
+
+{% endif %}
+
+<p> There is a set of measurements of air quality, pollution and weather conditions based on sensors. </p>
+
+
+
+{% endblock %}
+
