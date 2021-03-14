@@ -31,6 +31,11 @@ Obtain the url to your git repository.
 git clone https://github.com/CodingBee77/Python_projects.gitt
 ```
 
+###Option 1 - use Docker
+
+
+###Option 2 - create virtual env and install all dependencies
+
 **Creating the environment**
 
 Create a virtual python environment for the project. If you're not using virtualenv you may skip this step.
