@@ -36,20 +36,10 @@ git clone https://github.com/CodingBee77/Python_projects.gitt
 After cloning the repo, go to the app directory with the Dockerfile and:
 
 ```
- docker build -t weather_app .
+ docker-compose up
 ```
 
-'weather_app' is the name of the image - you can change it.
-
-
-Start your container using the 'docker run' command and specify the name
-of the image we just created:
-
-```
- docker run -dp 3000:3000 weather_app .
-```
-
-After a few seconds, open your web browser to http://localhost:3000. 
+After a few seconds, open your web browser to http://localhost:0.0.0.0. 
 You should see our app!
 
 
